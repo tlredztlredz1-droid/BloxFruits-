@@ -1,0 +1,27 @@
+SCRIPT DE CÓDIGO ABERTO ]] --
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/linhmcfake/LuaLibrary/refs/heads/main/RedzLibraryV5.lua"))()
+
+-- Criação da Janela Principal
+local Window = redzlib:MakeWindow({
+    Title = "shadowHub : Blox Fruits",
+    SubTitle = "by Discord NightShadow",
+    SaveFolder = "shadowhub_config.json",
+    Theme = "Dark"
+})
+
+-- Botão de Minimizar
+Window:AddMinimizeButton({
+    Button = {
+        Image = "rbxassetid://81996994508174",
+        BackgroundTransparency = 0
+    },
+    Corner = { CornerRadius = UDim.new(0, 5) }
+})
+
+-- Abas
+local TabDiscord  = Window:MakeTab({"Discord", "rbxassetid://86641106722992"})
+local TabFarm     = Window:MakeTab({"Farm", "home"})
+local TabEvent    = Window:MakeTab({"Evento", "waves"})
+local TabItems    = Window:MakeTab({"Itens", "swords"})
+local TabStats    = Window:MakeTab({"Status", "gem"})
+local TabSettings = Window:MakeTab({"Config", "settings"})
